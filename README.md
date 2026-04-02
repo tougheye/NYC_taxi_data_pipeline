@@ -37,7 +37,6 @@ We utilized a Lakehouse Architecture (Medallion pattern) adapted for the Databri
 **Phase 1: Environment Setup & Discovery**
   Objective: Provision the Databricks environment and explore the data schema.
   Task: Spun up a Compute Cluster (1 Driver, 15GB Memory - standard for Free Edition).
-  
 
 **Phase 2: The Ingestion Pipeline (Bronze & Silver)**
   Objective: Ingest raw data and apply data quality rules.
@@ -47,9 +46,11 @@ We utilized a Lakehouse Architecture (Medallion pattern) adapted for the Databri
   
 **Phase 3: Business Logic Aggregation (Gold)**
   Objective: Answer the business questions.
-  Logic (Zone Performance): Grouped by pickup_zip (or location ID) and hour_of_day. Calculated 
-  [avg_revenue_per_mile]([url](https://dbc-38c471d1-00a8.cloud.databricks.com/sql/dashboardsv3/01f11ce819021fffaa6cf47be2e5c144/pages/85a936f1?autoLogin=true&email=mkamin.6696%40gmail.com&o=7474660684945760&utm_campaign=copy_widget_link&fullscreenWidget=85a936f1~pickup_honeypot_map)) 
-  and 
-  [total_trips]([url](https://dbc-38c471d1-00a8.cloud.databricks.com/sql/dashboardsv3/01f11ce819021fffaa6cf47be2e5c144/pages/85a936f1?autoLogin=true&email=mkamin.6696%40gmail.com&o=7474660684945760&utm_campaign=copy_widget_link&fullscreenWidget=85a936f1~nyc-taxi-ride-counts-weekdays-times-day)).
-  
+  Logic (Zone Performance): Grouped by pickup_zip (or location ID) and hour_of_day. 
+
   to locate the hotspots during different days of the week and different parts of the day. The dashboards can be filtered to focus on specific days and times. This way the company can be more efficient by sending drivers to the nearest hotspots at the right time. Having the average fare would also enable the company to provide financial incentives to drivers. 
+
+  The Ride count dashboard are available at following links. Please feel free to reach out at mkamin.6696@gmail.com if you have any questions. Thank you! 
+  1. https://dbc-38c471d1-00a8.cloud.databricks.com/sql/dashboardsv3/01f11ce819021fffaa6cf47be2e5c144?o=7474660684945760&utm_campaign=copy_widget_link&fullscreenWidget=85a936f1~nyc-taxi-ride-counts-weekdays-times-day
+  2. https://dbc-38c471d1-00a8.cloud.databricks.com/sql/dashboardsv3/01f11ce819021fffaa6cf47be2e5c144?o=7474660684945760&utm_campaign=copy_widget_link&fullscreenWidget=85a936f1~pickup_honeypot_map
+  
